@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4e4e4e;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 20vh;
+    position: absolute;
+    z-index: 5;
+    background: url('./../images/sushi-slider-2.jpg');
+    left: 0;
+    right: 0;
+}
