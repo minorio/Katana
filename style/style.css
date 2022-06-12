@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Poiret+One&family=Reggae+One&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 
 * {
     box-sizing: border-box;
-    font-family: 'Reggae One', cursive;
+    font-family: 'Ovsyanka', sans-serif;
+    /* font-family: 'Yeseva One', cursive; */
+    /* font-family: 'Play', sans-serif; */
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    /* font-family: 'Reggae One', cursive; */
 }
 
 body {
     background-color: #E7EAD9;
     margin: 0;
-
 }
 
 .container {
@@ -49,7 +54,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 260px;
+    margin-top: 320px;
     color: #E7EAD9;
     
 
@@ -74,12 +79,13 @@ body {
 }
 
 .header-content__text {
-    font-size: 48px;
+    font-size: 50px;
     /* width: 400px; */
     text-align: center;
-    font-weight: bold; 
+    font-weight: 400; 
     z-index: 1;
-    color: #ffffff;
+    color: #fff;
+    text-shadow: 2px 2px 5px #362C28;
 }
 
 
@@ -88,25 +94,31 @@ body {
     bottom: 0;
     right: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
     width: 140px;
     z-index: 1;
 }
 
 .header__social-link{
-    margin: 10px 20px; 
-    font-size: 16px;   
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    writing-mode: vertical-lr;
+    margin: 30px 20px; 
+    transition: all .7s;
 }
-
-
-
+.header__social-link:hover{
+    transform: scale(1.2);
+    transition: all 0.8s;
+}
+.header__social-link svg{
+    height: 45px;
+    width: 45px;
+    transition: all .6s;
+}
+.header__social-link svg:hover{
+    fill: #83E7E5;
+    border-radius: 50%;
+}
 
 
 
@@ -153,13 +165,13 @@ body {
     align-items: center;
     list-style-type: none;
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     z-index: 1;
 }
 
 .menu__list-item {
-    padding: 14px 10px;
+    padding: 14px 8px;
     position: relative;
     overflow: hidden;
     transition: all 2s;
@@ -299,7 +311,7 @@ body {
     background-image:inherit;
     background-size:cover;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    transition:1s;
+    transition:.7s;
   }
   .slider__item:before {
     /* clip-path:polygon(0 0, 32% 0 ,32% 19%,  97% 100%, 0 100%); */
@@ -366,7 +378,7 @@ body {
 }
 
 .slider .slick-dots .slick-active button {
-    background-color: #ff71b1;
+    background-color: #83E7E5;
 }
 
 .slider .slick-dots li {
@@ -377,7 +389,7 @@ body {
 .slider .slick-dots {
     margin: -55px auto 0;
     position: relative;
-    z-index: 6;
+    z-index: 1;
     max-width: 1230px;
     padding: 0 15px;
 }
@@ -410,7 +422,7 @@ body {
     z-index: 10;
     clip-path: polygon(100% 0, 68% 0, 26% 100%, 100% 100%); 
     overflow: hidden;
-    background-color: #fff;
+    background-color: #83E7E5;
 }
 
 .hidemenu.active {
@@ -458,20 +470,21 @@ body {
 
 .hidemenu__list {
     list-style: none;
-    margin-right: -75px;
+    margin-right: -120px;
     
 
 }
 
 .hidemenu__list-item a {
-    font-family: 'Neucha', sans-serif;
+    position: absolute;
+    font-family: 'Ovsyanka', sans-serif;
     font-size: 48px;
     line-height: 56px;
     font-weight: 700;
     padding: 30px 25px 14px 0;
     display: inline-block;
     min-width: 450px;
-    transition: all .5s;
+    transition: all .6s;
     text-decoration: none;
     color: #000000;
     position: relative;
@@ -486,31 +499,78 @@ body {
 .hidemenu__list-item a::before {
     content: '';
     position: absolute;
-    bottom: 34px;
+    bottom: 36px;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: #ff71b1;
-    transform: translateX(-100%);
-    transition: all 0.4s;
+    transform: translateX(100%);
+    transition: all 0.8s;z-index: -1;
+   
 }
 
 .hidemenu__list-item a:hover::before {
-    transform: translateX(0%);
+    transform: translateX(-100%);
 }
 
-/* .hidemenu__list-item a:hover {
-    border-color: rgb(0, 0, 0);
-    border-bottom: 3px solid #362C28;
+.hidemenu__list-item a:hover {
+    /* border-color: rgb(0, 0, 0);
+    border-bottom: 3px solid #362C28; */
+    transform: scale(1.1);
+}
 
-} */
+
+.about{
+    height: 100vh;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    
+}
+.about_background {
+    background: url('./../images/shef.jpg');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.about__description{
+    /* position: absolute; */
+    color: #fff;
+    width: 600px;
+    background-color: #000000b2;
+    height: 900px;
+    margin: 0 0 0 200px;
+    padding: 40px 25px;
+    
+}
+
+.about__title{
+    font-size: 26px;
+    font-weight: 700;
+    /* color: #362C28; */
+}
+
+.about__text{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 26px;
+    /* color: #362C28; */
+}
+
+
+
+
+
 
 
 
 .delivery {
     color: #362C28;
     background-color: #E7EAD9;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
 }
 
@@ -568,7 +628,7 @@ body {
 
 .movetopbtn {
     display: inline-block;
-    background-color: #ff71b1;
+    background-color: #362C28;
     width: 70px;
     height: 46px;
     border-radius: 5px;
@@ -1000,3 +1060,14 @@ body {
 .show{
     display: block;
 }
+
+
+
+
+
+@font-face { 
+    font-family: "Ovsyanka"; 
+    src: url("../fonts/Ovsyanka.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
